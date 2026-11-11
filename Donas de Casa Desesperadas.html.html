@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donas de Casa Desesperadas — Tribute</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================================
+       PALETA E VARIÁVEIS
+    ================================= */
+    :root {
+      --bg: #f7f3ef;
+      --card: #ffffff;
+      --accent: #9b1f2b;
+      --muted: #877f7a;
+      --olive: #6a7a4f;
+      --gold: #caa14a;
+      --shadow: rgba(30,30,30,0.08);
+    }
+
+    /* ================================
+       RESET E BASE
+    ================================= */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Raleway', system-ui;
+      background: linear-gradient(180deg,var(--bg),#efeae6);
+      color:#222;
+      line-height:1.5;
+      -webkit-font-smoothing: antialiased;
+      padding:2rem;
+    }
+
+    img { display:block; width:100%; height:auto; }
+
+    .container { max-width:1100px; margin:0 auto; }
+
+    /* ================================
+       CARDS E ELEMENTOS COMUNS
+    ================================= */
+    .hero-card, .card, .info-box {
+      background:linear-gradient(0deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+      padding:1.5rem;
+      border-radius:14px;
+      box-shadow:0 8px 30px var(--shadow);
+      border:1px solid rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      margin:2rem 0 1rem;
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+    }
+    .section-title h2 {
+      font-family:'Playfair Display', serif;
+      font-size:1.4rem;
+      color:var(--muted);
+    }
+    .dot {
+      width:12px; height:12px;
+      background:var(--gold);
+      border-radius:50%;
+      box-shadow:0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    /* ================================
+       HERO / HEADER
+    ================================= */
+    header.hero {
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:2rem;
+      align-items:center;
+      margin-bottom:2rem;
+    }
+
+    h1 {
+      font-family:'Playfair Display', serif;
+      font-size:2.3rem;
+      color:var(--accent);
+      margin-bottom:.4rem;
+    }
+
+    .tagline {
+      color:var(--muted);
+      font-weight:600;
+      margin-bottom:1rem;
+    }
+
+    .poster {
+      display:flex;
+      flex-direction:column;
+      background:var(--card);
+      border-radius:16px;
+      padding:1rem;
+      box-shadow:0 6px 20px var(--shadow);
+      border:1px solid rgba(0,0,0,0.04);
+    }
+
+    .poster figcaption { 
+      font-size:.95rem; 
+      color:var(--muted);
+      margin-top:.5rem;
+    }
+
+    /* ================================
+       GRID DE PERSONAGENS
+    ================================= */
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:1rem;
+      margin-top:1.5rem;
+    }
+
+    .card {
+      background:var(--card);
+      padding:1rem;
+      border-radius:12px;
+      box-shadow:0 6px 18px var(--shadow);
+      border-left:6px solid var(--olive);
+      transition:transform .25s, box-shadow .25s;
+    }
+    .card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 14px 30px rgba(20,20,20,0.12);
+    }
+    .card h3 {
+      font-family:'Playfair Display', serif;
+      font-size:1.1rem;
+      color:var(--accent);
+      margin-bottom:.3rem;
+    }
+    .card p { font-size:.92rem; color:#444; }
+
+    /* ================================
+       INFO E LISTAS
+    ================================= */
+    .info-box ul { padding-left:1.2rem; }
+    .muted { color:var(--muted); }
+    .small { font-size:.9rem; }
+
+    footer {
+      margin-top:4rem;
+      text-align:center;
+      font-size:.9rem;
+      color:var(--muted);
+    }
+
+    /* ================================
+       RESPONSIVO
+    ================================= */
+    @media (max-width:880px){
+      header.hero {
+        grid-template-columns:1fr;
+      }
+      .poster { order:-1; }
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- ================================
+       HERO
+  ================================= -->
+  <header class="hero hero-card">
+    <div>
+      <h1>Desperate Housewives</h1>
+      <p class="tagline">Segredos perfeitos. Jardins bem-cortados. Vidas em silêncio.</p>
+
+      <div class="info-box">
+        <p>Em um subúrbio impecável, quatro vidas se entrelaçam: amizade, traição, comédia amarga e mistérios que corroem portões brancos e festas de rua. A série explora o feminino, a aparência e o preço de manter as aparências.</p>
+      </div>
+
+      <div class="section-title">
+        <div class="dot"></div><h2>Personagens principais</h2>
+      </div>
+
+      <div class="grid" role="list">
+
+        <article class="card" role="listitem">
+          <img src="https://upload.wikimedia.org/wikipedia/it/2/21/SusanMayerDH.jpg" alt="Susan Mayer, romântica desajeitada">
+          <h3>Susan Mayer</h3>
+          <p class="small muted">A romântica desajeitada — sempre encontrando comédia na própria tragédia.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjfjzswwrJYSwOg8FwfiayatVQbo63msY_KA&s" alt="Gabrielle Solis">
+          <h3>Gabrielle Solis</h3>
+          <p class="small muted">Glamour como armadura — vaidade que esconde inquietações profundas.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <img src="https://i.insider.com/5d14df0b2516e9785047b1ee?width=600&format=jpeg&auto=webp" alt="Lynette Scavo">
+          <h3>Lynette Scavo</h3>
+          <p class="small muted">Gerente de caos — força cansada e humor afiado.</p>
+        </article>
+
+        <article class="card" role="listitem">
+          <img src="https://cinepop.com.br/wp-content/uploads/2024/03/bree-van-de-kamp-desperate-housewives.jpg" alt="Bree Van de Kamp">
+          <h3>Bree Van de Kamp</h3>
+          <p class="small muted">Perfeição como defesa — controle absoluto que esconde rachaduras.</p>
+        </article>
+
+      </div>
+    </div>
+
+    <figure class="poster">
+      <img src="https://danielacolaci.com/wp-content/uploads/2016/01/d015f845425a476920e5fbfa739bec5f.jpg?w=640" alt="Poster estilizado de Donas de Casa Desesperadas">
+      <figcaption><strong>Nome:</strong> Desperate Housewives — <span class="muted">Drama / Comédia</span></figcaption>
+    </figure>
+  </header>
+
+  <footer>Projeto rápido • Feito com estética e um toque de suspense.</footer>
+
+</div>
+
+
+<!-- ================================
+     SESSÃO: SOBRE A TRAMA
+================================= -->
+<section class="container">
+  <div class="section-title">
+    <div class="dot"></div><h2>Sobre a trama</h2>
+  </div>
+  <div class="hero-card info-box">
+    <p>A história se passa em Wisteria Lane, um bairro onde o silêncio é tão bem aparado quanto as cercas vivas. A morte de Mary Alice Young desencadeia uma rede de segredos. A narrativa acompanha Bree, Lynette, Susan e Gabrielle — enfrentando crises familiares, intrigas e mistérios que revelam que a vida suburbana é tudo, menos inocente.</p>
+  </div>
+</section>
+
+<!-- ================================
+     SESSÃO: TEMPORADAS
+================================= -->
+<section class="container">
+  <div class="section-title">
+    <div class="dot"></div><h2>Temporadas e evolução</h2>
+  </div>
+  <div class="hero-card info-box">
+    <ul>
+      <li><strong>1ª Temporada:</strong> Mistério da morte de Mary Alice.</li>
+      <li><strong>2ª Temporada:</strong> O enigmático segredo dos Applewhite.</li>
+      <li><strong>3ª Temporada:</strong> Conflitos envolvendo Bree e Orson Hodge.</li>
+      <li><strong>4ª Temporada:</strong> O furacão que muda tudo.</li>
+      <li><strong>5ª Temporada:</strong> Salto temporal de cinco anos.</li>
+      <li><strong>6ª a 8ª:</strong> Novos vizinhos, crimes e desfechos marcantes.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================================
+     SESSÃO: CURIOSIDADES
+================================= -->
+<section class="container">
+  <div class="section-title">
+    <div class="dot"></div><h2>Curiosidades</h2>
+  </div>
+  <div class="hero-card info-box">
+    <ul>
+      <li>Marc Cherry se inspirou em escândalos reais do subúrbio americano.</li>
+      <li>Wisteria Lane foi construída nos estúdios da Universal.</li>
+      <li>Mary Alice narra cada episódio como consciência onisciente.</li>
+      <li>Estética única misturando drama, humor ácido e crítica social.</li>
+    </ul>
+  </div>
+</section>
+
+</body>
+</html>
